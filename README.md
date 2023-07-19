@@ -1,4 +1,34 @@
-# New Next Project
+# Kitten Cloud (Cloudinary Image Upload Demo)
+
+This project demonstrates how to upload images to Cloudinary using Next.js API routes.
+
+![Data Flow](./flow.excalidraw.png)
+
+## `pages/index.js`
+
+`pages/index.js` contains a form that allows you to upload an image to the `api/upload` route using fetch.
+It then displays all uploaded images from a state persisted in local storage.
+
+## `pages/api/upload.js`
+
+`pages/api/upload.js` contains the route that handles the image upload.
+
+- It uses the `formidable` package to parse the incoming request.
+- It uses the `cloudinary` package to upload the image to Cloudinary.
+
+## Cloudinary
+
+You need to set up cloudinary account and create a cloudinary project to use this demo.
+
+Set these environment variables in your `.env.local` file or in your deployment environment:
+
+```bash
+CLOUDINARY_CLOUD_NAME=
+CLOUDINARY_API_KEY=
+CLOUDINARY_API_SECRET=
+```
+
+## Template
 
 This project was created from the neue fische `next` template.
 
