@@ -26,7 +26,9 @@ export default async function handler(request, response) {
       return;
     }
 
-    const uploadResult = await cloudinary.uploader.upload(imageFile.filepath);
+    const uploadResult = await cloudinary.uploader.upload(imageFile.filepath, {
+      folder: "kitten-cloud",
+    });
 
     // TODO: insert uploadResult into database
 
