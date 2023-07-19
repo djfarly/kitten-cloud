@@ -3,6 +3,16 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "res.cloudinary.com",
+        port: "",
+        pathname: "**",
+      },
+    ],
+  },
   reactStrictMode: true,
   webpack(config) {
     config.module.rules.push({
